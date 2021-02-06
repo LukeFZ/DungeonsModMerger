@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -87,6 +88,31 @@ namespace LevelModMerger
             var temp2 = File.Create("./customlevels.json");
             temp2.Close();
             File.AppendAllText("./customlevels.json",JsonConvert.SerializeObject(loaderDict,Formatting.Indented));
+
+            if (File.Exists("./Tools/u4pak.py"))
+            {
+                run_cmd("python", $"{Directory.GetCurrentDirectory() + "/Tools/u4pak.py"} pack {Directory.GetCurrentDirectory() + "/MergedMods.pak"} Dungeons", path);
+                Console.WriteLine("Conversion successfully completed!");
+            }
+            else
+            {
+                Console.WriteLine("Conversion successful! As u4pak was not found, you need to create the .pak file yourself.");
+                Console.Read();
+            }
+        }
+
+        private static void run_cmd(string cmd, string args,string workingdirectory)
+        {
+            ProcessStartInfo start = new ProcessStartInfo
+            {
+                FileName = cmd,
+                Arguments = args,
+                WorkingDirectory = workingdirectory,
+                UseShellExecute = true
+            };
+
+            Process.Start(start);
+
         }
     }
 }
