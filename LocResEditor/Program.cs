@@ -28,7 +28,7 @@ namespace LocResEditor
 
             if (path.EndsWith(".json"))
             {
-                outputPath ??= $"./{Path.GetFileNameWithoutExtension(path)}.json";
+                outputPath ??= $"./{Path.GetFileNameWithoutExtension(path)}.locres";
                 var jsoncontents = File.ReadAllText(path);
                 var filestream = File.Open(outputPath, FileMode.Create);
                 var filewriter = new BinaryWriter(filestream);

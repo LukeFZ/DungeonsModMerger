@@ -25,6 +25,12 @@ namespace LevelModMerger
                 path = Console.ReadLine();
             }
 
+            if (!File.Exists("./original.json"))
+            {
+                Console.WriteLine("Error: original.json could not be found in the current folder. Please redownload from Github.");
+                Environment.Exit(-1);
+            }
+
             var locrespath = Path.Join(path, "Dungeons", "Content", "Localization", "Game", "en");
             var levelspath = Path.Join(path, "Dungeons", "Content", "data", "lovika", "levels");
             var labelspath = Path.Join(path, "Dungeons", "Content", "Decor", "Text");
@@ -47,7 +53,7 @@ namespace LevelModMerger
             }
 
             var locreshandle = new LocresHandling();
-            var locresdict = JsonConvert.DeserializeObject<IndexedDictionary<string, IndexedDictionary<string, BinaryExtensions.FStringWithUCS>>>(File.ReadAllText("./Game.json"));
+            var locresdict = JsonConvert.DeserializeObject<IndexedDictionary<string, IndexedDictionary<string, BinaryExtensions.FStringWithUCS>>>(File.ReadAllText("./original.json"));
 
             mergedModStrings.ToList().ForEach(x => locresdict["creeperwoodsLabels"][x.Key] = new BinaryExtensions.FStringWithUCS()
             {
@@ -78,6 +84,7 @@ namespace LevelModMerger
 
             Dictionary<string,string> loaderDict = new Dictionary<string, string>();
             int beginningSeed = 100000;
+
             foreach (string levelfile in Directory.GetFiles(levelspath,"*.json",SearchOption.TopDirectoryOnly))
             {
                 var name = Path.GetFileNameWithoutExtension(levelfile);
