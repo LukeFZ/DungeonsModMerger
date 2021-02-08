@@ -27,7 +27,7 @@
      2. Do not change the level-id to anything other than "creeperwoods".
        This is needed to ensure that the custom strings you are using are going to be loaded by the game.
        
-      The [Dokucraft Mod Kit](https://github.com/Dokucraft/Dungeons-Mod-Kit) and [Level Format Documentation](https://github.com/Dokucraft/Dungeons-Level-Format) are also going to be very helpful resources in your journeys.
+      The [Dokucraft Mod Kit](https://github.com/Dokucraft/Dungeons-Mod-Kit) and [Level Format Documentation](https://github.com/Dokucraft/Dungeons-Level-Format) are also going to be very helpful resources in your journey.
      
    - I have more questions that were not answered here:
      You can reach out to me on the [Dungeoneer's Hideout](https://discord.gg/S7gKeh5FR2) discord server. 
