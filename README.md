@@ -16,7 +16,8 @@
    - How to create .levelmod files?   
     .levelmod files are renamed .zip archives, that contain a "Dungeons" folder with the assets for the given level   
     (like a normal .pak mod), but also a "Game.json" with the custom strings you want to use for your level.   
-    They should follow this naming scheme: "*modName\*.levelmod".
+    They should follow this naming scheme: "*modName\*.levelmod".  
+    **Note: An example .levelmod file is provided [here](https://cdn.discordapp.com/attachments/768927253722955819/808340880154034176/ExampleMod.levelmod). (Level created by Azuran_SHadow)** 
     
    - I want to create my own custom levels:   
      If you want to make your own custom levels for Minecraft: Dungeons you need to follow a few basic guidelines:
