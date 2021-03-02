@@ -26,7 +26,7 @@
         This is to ensure mod compatability between all level mods.
         
      2. ~Do not change the level-id to anything other than "creeperwoods".
-       This is needed to ensure that the custom strings you are using are going to be loaded by the game.~
+       This is needed to ensure that the custom strings you are using are going to be loaded by the game.~  
        (**Game update 1.8.0.0 changed this to allow for custom lighting, you can now choose whichever level id you want.  
        You just need to set the "loctable-id" to "creeperwoods", to allow for the custom strings to be loaded.**
        
