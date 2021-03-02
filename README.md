@@ -25,8 +25,10 @@
      1. Do not replace any official assets, only add your own.
         This is to ensure mod compatability between all level mods.
         
-     2. Do not change the level-id to anything other than "creeperwoods".
-       This is needed to ensure that the custom strings you are using are going to be loaded by the game.
+     2. ~Do not change the level-id to anything other than "creeperwoods".
+       This is needed to ensure that the custom strings you are using are going to be loaded by the game.~
+       (**Game update 1.8.0.0 changed this to allow for custom lighting, you can now choose whichever level id you want.  
+       You just need to set the "loctable-id" to "creeperwoods", to allow for the custom strings to be loaded.**
        
       The [Dokucraft Mod Kit](https://github.com/Dokucraft/Dungeons-Mod-Kit) and [Level Format Documentation](https://github.com/Dokucraft/Dungeons-Level-Format) are also going to be very helpful resources in your journey.
      
